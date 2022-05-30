@@ -27,6 +27,7 @@ India.geojsonl &
 
 
 ## Serving vector tiles
+- Using TileServer GL: https://github.com/maptiler/tileserver-gl/ , https://tileserver.readthedocs.io/
 - loading the generated .mbtiles straight into tileserver-gl without any config is working:
 ```
 docker run --rm -it -v $(pwd):/data -p 7100:8080 -p 7101:80 maptiler/tileserver-gl --verbose -b 0.0.0.0 -u "https://server.nikhilvj.co.in/buildings1/"
