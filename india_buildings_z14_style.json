@@ -1,0 +1,28 @@
+{
+  "version": 8,
+  "name": "india_buildings_z14",
+  "metadata": {"maputnik:renderer": "mbgljs"},
+  "sources": {
+    "india_buildings_z14": {
+      "type": "vector",
+      "url":"mbtiles://india_buildings_z14.mbtiles"
+    }
+  },
+  "sprite": "",
+  "glyphs": "https://orangemug.github.io/font-glyphs/glyphs/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "id1",
+      "type": "fill",
+      "source": "india_buildings_z14",
+      "source-layer": "Indiageojsonl",
+      "paint": {
+        "fill-color": "rgba(33, 35, 206, 1)",
+        "fill-opacity": 0.2,
+        "fill-antialias": true,
+        "fill-outline-color": "rgba(0, 0, 0, 1)"
+      }
+    }
+  ],
+  "id": "india_buildings_z14"
+}
