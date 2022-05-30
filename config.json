@@ -1,0 +1,26 @@
+{
+  "options": {
+    "paths": {
+      "root": "",
+      "fonts": "",
+      "sprites": "",
+      "styles": "",
+      "mbtiles": "/data"
+    }
+  },
+  "styles": {
+    "basic": {
+      "style": "/data/india_buildings_z14_style.json",
+      "serve_rendered": true,
+      "tilejson": {
+        "type": "overlay",
+        "bounds":[69.493834,8.126528,94.017383,34.802875]
+      }
+    }
+  },
+  "data": {
+    "india_buildings_z14": {
+      "mbtiles": "india_buildings_z14.mbtiles"
+    }
+  }
+}
