@@ -72,6 +72,7 @@ Startup complete
 - Was able to get the buildings appearing in preview in maputnik. Made a style and saved the style json.
 - Edited style json to change data source url to "mbtiles://india_buildings_z14.mbtiles" instead of the pbf url that maputnik had saved.
 - made config.json point to this style, and kept "serve_rendered": true
+- placed both config.json and the style json in the same folder as the .mbtiles file which is mounted as /data in docker command.
 - Re-deployed with config:  
 ```
 docker run -d -v$(pwd):/data -p 7100:8080 -p 7101:80 maptiler/tileserver-gl -c config.json --verbose -b 0.0.0.0 -u "https://server.nikhilvj.co.in/buildings1/" 
