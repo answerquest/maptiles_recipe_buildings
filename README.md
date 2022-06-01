@@ -4,7 +4,7 @@ recipes to serve vector and raster map tiles of datasets by https://github.com/m
 ## Latest status: 
 - as of: 2022-05-30
 - Vector AND Raster map tiles layers working, see: https://server.nikhilvj.co.in/buildings1/ (Tileserver GL deployment)
-- Vector tile url: `https://server.nikhilvj.co.in/buildings1/data/buildings-z13/{z}/{x}/{y}.pbf`
+- Vector tile url: `https://server.nikhilvj.co.in/buildings1/data/india_buildings_z14/{z}/{x}/{y}.pbf`
 - Raster webp url: `https://server.nikhilvj.co.in/buildings1/styles/basic/{z}/{x}/{y}.webp` (reccommended, is faster than png)
 - Raster png url: `https://server.nikhilvj.co.in/buildings1/styles/basic/{z}/{x}/{y}.png`
 
@@ -33,6 +33,8 @@ India.geojsonl &
 docker run --rm -it -v $(pwd):/data -p 7100:8080 -p 7101:80 maptiler/tileserver-gl --verbose -b 0.0.0.0 -u "https://server.nikhilvj.co.in/buildings1/"
 ```
 - output:
+<details>
+  
 ```
 Starting tileserver-gl v3.1.1
 No MBTiles specified, using india_buildings_z14.mbtiles
@@ -60,7 +62,8 @@ Starting server
 Listening at http://0.0.0.0:8080/
 Startup complete
 ```
-
+  
+</details>
 - live on: https://server.nikhilvj.co.in/buildings1/
 
 ## Serving raster tiles
@@ -81,3 +84,7 @@ docker run -d -v$(pwd):/data -p 7100:8080 -p 7101:80 maptiler/tileserver-gl -c c
 - the config.json and india_buildings_z14_style.json files are uploaded in this repo.
 
 
+## Publishing on a URL with SSL
+- Setup Reverse-proxy in Apache server config to map the :7100 port number to a url sub-path - in this case, /buildings1/ .
+- Ref guide: https://www.digitalocean.com/community/tutorials/how-to-use-apache-http-server-as-reverse-proxy-using-mod_proxy-extension-ubuntu-20-04 
+- I've already setup SSL using LetsEncrypt, here's guide for that: https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-20-04 
