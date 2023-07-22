@@ -3,7 +3,7 @@ recipes to serve vector and raster map tiles of datasets by https://github.com/m
 
 ## Latest status: 
 - as of: 2022-05-30
-- Vector AND Raster map tiles layers working, see: https://server.nikhilvj.co.in/buildings1/ (Tileserver GL deployment)
+- Vector AND Raster map tiles layers working, see: https://server.nikhilvj.co.in/tileserver/ (Tileserver GL deployment)
 - Vector tile url: `https://server.nikhilvj.co.in/buildings1/data/india_buildings_z14/{z}/{x}/{y}.pbf`
 - Raster webp url: `https://server.nikhilvj.co.in/buildings1/styles/basic/{z}/{x}/{y}.webp` (reccommended, is faster than png)
 - Raster png url: `https://server.nikhilvj.co.in/buildings1/styles/basic/{z}/{x}/{y}.png`
@@ -30,7 +30,7 @@ India.geojsonl &
 - Using TileServer GL: https://github.com/maptiler/tileserver-gl/ , https://tileserver.readthedocs.io/
 - loading the generated .mbtiles straight into tileserver-gl without any config is working:
 ```
-docker run --rm -it -v $(pwd):/data -p 7100:8080 -p 7101:80 maptiler/tileserver-gl --verbose -b 0.0.0.0 -u "https://server.nikhilvj.co.in/buildings1/"
+docker run --rm -it -v $(pwd):/data -p 7100:8080 -p 7101:80 maptiler/tileserver-gl --verbose -b 0.0.0.0 -u "https://server.nikhilvj.co.in/tileserver/"
 ```
 - output:
 <details>
@@ -64,7 +64,7 @@ Startup complete
 ```
   
 </details>
-- live on: https://server.nikhilvj.co.in/buildings1/
+- live on: https://server.nikhilvj.co.in/tileserver/
 
 ## Serving raster tiles
 - As per https://tileserver.readthedocs.io/en/latest/config.html , 
